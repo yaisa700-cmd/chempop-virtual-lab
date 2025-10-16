@@ -1,0 +1,16 @@
+<svg width="980" height="420" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="brine" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#c3e4ff"/><stop offset="100%" stop-color="#9cd3ff"/></linearGradient></defs>
+<rect x="230" y="90" width="520" height="240" rx="14" ry="14" fill="url(#brine)" stroke="#5aa" stroke-width="3"/>
+<rect x="360" y="50" width="20" height="300" fill="#333"/><rect x="600" y="50" width="20" height="300" fill="#333"/>
+<rect x="80" y="150" width="68" height="36" rx="8" ry="8" fill="#777"/><text x="100" y="172" font-size="12" fill="#fff">9V</text>
+<circle cx="170" cy="168" r="14" fill="#ffd27a" stroke="#b68" stroke-width="2"/>
+<line x1="154" y1="168" x2="360" y2="168" stroke="#444" stroke-width="3"/>
+<line x1="620" y1="168" x2="910" y2="168" stroke="#444" stroke-width="3"/>
+<line x1="900" y1="164" x2="936" y2="146" stroke="#444" stroke-width="5"/>
+<circle cx="900" cy="164" r="5" fill="#444"/><circle cx="936" cy="146" r="5" fill="#444"/>
+<!-- green gas bubbles at anode -->
+<circle cx="610" cy="120" r="5" fill="#38c172"/><circle cx="622" cy="106" r="5" fill="#38c172"/><circle cx="634" cy="92" r="5" fill="#38c172"/>
+<!-- sodium plating (gold) at cathode -->
+<rect x="360" y="240" width="20" height="50" fill="#d4af37" opacity="0.85"/>
+</svg>

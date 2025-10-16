@@ -1,0 +1,35 @@
+<svg width="980" height="520" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="steel" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#e7eaee"/><stop offset="100%" stop-color="#aab2bb"/></linearGradient>
+  <linearGradient id="glass" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="rgba(210,235,255,0.45)"/><stop offset="100%" stop-color="rgba(170,205,245,0.2)"/></linearGradient>
+</defs>
+<rect x="0" y="460" width="980" height="60" fill="url(#steel)"/>
+<!-- clamp stand -->
+<rect x="140" y="240" width="12" height="220" fill="#5c6770"/>
+<rect x="140" y="240" width="260" height="10" fill="#5c6770"/>
+<!-- heating mantle + round-bottom -->
+<ellipse cx="240" cy="455" rx="80" ry="14" fill="#667085"/>
+<circle cx="240" cy="375" r="65" fill="url(#glass)" stroke="#6aa" stroke-width="2"/>
+<!-- three-way adaptor (Y) -->
+<path d="M300 350 Q360 330 435 310" fill="none" stroke="#6aa" stroke-width="10" stroke-linecap="round"/>
+<path d="M300 365 Q360 345 435 325" fill="none" stroke="#6aa" stroke-width="10" stroke-linecap="round"/>
+<line x1="240" y1="310" x2="300" y2="357" stroke="#6aa" stroke-width="10"/>
+<!-- thermometer stem -->
+<line x1="285" y1="260" x2="315" y2="360" stroke="#d33" stroke-width="6"/>
+<!-- Liebig condenser (slightly tilted down) -->
+<rect x="435" y="285" width="360" height="30" rx="15" ry="15" fill="url(#glass)" stroke="#6aa" stroke-width="2" transform="rotate(-10 435 285)"/>
+<circle cx="470" cy="300" r="6" fill="#69c"/>
+<circle cx="740" cy="308" r="6" fill="#69c"/>
+<!-- receiving adaptor + Erlenmeyer -->
+<path d="M785 315 L815 338" stroke="#6aa" stroke-width="8" stroke-linecap="round"/>
+<path d="M815 338 L815 400" stroke="#6aa" stroke-width="8" stroke-linecap="round"/>
+<path d="M780 400 L850 400 L830 460 L800 460 Z" fill="url(#glass)" stroke="#6aa" stroke-width="2"/>
+<!-- distillate droplets -->
+<circle cx="817" cy="355" r="4" fill="#69c"/>
+<circle cx="820" cy="370" r="4" fill="#69c"/>
+<!-- slim curved test tube left -->
+<path d="M70 300 C70 265 98 252 116 252 L126 405 Q124 440 150 455" fill="none" stroke="#6aa" stroke-width="6"/>
+<!-- burner hint -->
+<rect x="85" y="442" width="48" height="22" fill="#41484f"/>
+<path d="M109 420 C100 438, 118 438, 109 458 C124 438, 94 438, 109 420 Z" fill="#38a3ff"/>
+</svg>
