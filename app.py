@@ -1,4 +1,129 @@
+import streamlit as st
+from time import sleep
 
+def show_loading_overlay():
+    overlay = st.empty()
+    overlay.markdown(
+        """
+        <style>
+          .chempop-loader { position: fixed; inset: 0; z-index: 9999;
+            display: grid; place-items: center;
+            background: linear-gradient(180deg, #FFF1F5 0%, #FFFFFF 60%); }
+          .flask-wrap { position: relative; width: 240px; height: 260px; }
+          .flask { width: 240px; filter: drop-shadow(0 8px 20px rgba(236,72,153,0.25)); }
+          .liquid { fill: url(#liquidGradient); }
+          .bubble { animation: rise 3s infinite ease-in; opacity: 0.9; }
+          .bubble:nth-child(1){ animation-delay: 0.0s }
+          .bubble:nth-child(2){ animation-delay: 0.6s }
+          .bubble:nth-child(3){ animation-delay: 1.2s }
+          .bubble:nth-child(4){ animation-delay: 1.8s }
+          .bubble:nth-child(5){ animation-delay: 2.4s }
+          @keyframes rise {
+            0%{ transform: translateY(0) scale(1); opacity: 0; }
+            10%{ opacity: 1; }
+            70%{ transform: translateY(-80px) scale(1.05); opacity: 0.9; }
+            100%{ transform: translateY(-110px) scale(0.9); opacity: 0; }
+          }
+          .caption { margin-top: 16px; font: 600 14px/1.4 ui-sans-serif, system-ui;
+            color: #334155; text-align: center; }
+        </style>
+        <div class="chempop-loader">
+          <div class="flask-wrap">
+            <svg class="flask" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="liquidGradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%"  stop-color="#EC4899"/>
+                  <stop offset="50%" stop-color="#D4AF37"/>
+                  <stop offset="100%" stop-color="#14B8A6"/>
+                </linearGradient>
+              </defs>
+              <rect x="88" y="10" width="24" height="40" rx="6" fill="#0F172A"/>
+              <path d="M70 60 L130 60 L120 90 L80 90 Z" fill="#0F172A"/>
+              <path d="M50 90 C40 120, 40 160, 100 190 C160 160, 160 120, 150 90 Z"
+                    fill="none" stroke="#0F172A" stroke-width="5" />
+              <path class="liquid"
+                    d="M55 140 C60 155, 85 170, 100 175 C115 170, 140 155, 145 140
+                       C145 150, 145 160, 100 180 C55 160, 55 150, 55 140 Z" opacity="0.92"/>
+              <circle class="bubble" cx="95" cy="150" r="6" fill="#ffffff" />
+              <circle class="bubble" cx="115" cy="155" r="5" fill="#ffffff" />
+              <circle class="bubble" cx="105" cy="160" r="4" fill="#ffffff" />
+              <circle class="bubble" cx="90"  cy="165" r="3" fill="#ffffff" />
+              <circle class="bubble" cx="120" cy="162" r="4" fill="#ffffff" />
+            </svg>
+            <div class="caption">Your CHEMPOP lab is baking…</div>
+          </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+    return overlay
+
+_loading_overlay = show_loading_overlay()
+# keep the loader on screen briefly, then hide it
+sleep(2)                 # you can change 2 → 3 or 1 if you like
+_loading_overlay.empty()
+import streamlit as st
+from time import sleep
+
+def show_loading_overlay():
+    overlay = st.empty()
+    overlay.markdown(
+        """
+        <style>
+          .chempop-loader { position: fixed; inset: 0; z-index: 9999;
+            display: grid; place-items: center;
+            background: linear-gradient(180deg, #FFF1F5 0%, #FFFFFF 60%); }
+          .flask-wrap { position: relative; width: 240px; height: 260px; }
+          .flask { width: 240px; filter: drop-shadow(0 8px 20px rgba(236,72,153,0.25)); }
+          .liquid { fill: url(#liquidGradient); }
+          .bubble { animation: rise 3s infinite ease-in; opacity: 0.9; }
+          .bubble:nth-child(1){ animation-delay: 0.0s }
+          .bubble:nth-child(2){ animation-delay: 0.6s }
+          .bubble:nth-child(3){ animation-delay: 1.2s }
+          .bubble:nth-child(4){ animation-delay: 1.8s }
+          .bubble:nth-child(5){ animation-delay: 2.4s }
+          @keyframes rise {
+            0%{ transform: translateY(0) scale(1); opacity: 0; }
+            10%{ opacity: 1; }
+            70%{ transform: translateY(-80px) scale(1.05); opacity: 0.9; }
+            100%{ transform: translateY(-110px) scale(0.9); opacity: 0; }
+          }
+          .caption { margin-top: 16px; font: 600 14px/1.4 ui-sans-serif, system-ui;
+            color: #334155; text-align: center; }
+        </style>
+        <div class="chempop-loader">
+          <div class="flask-wrap">
+            <svg class="flask" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="liquidGradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%"  stop-color="#EC4899"/>
+                  <stop offset="50%" stop-color="#D4AF37"/>
+                  <stop offset="100%" stop-color="#14B8A6"/>
+                </linearGradient>
+              </defs>
+              <rect x="88" y="10" width="24" height="40" rx="6" fill="#0F172A"/>
+              <path d="M70 60 L130 60 L120 90 L80 90 Z" fill="#0F172A"/>
+              <path d="M50 90 C40 120, 40 160, 100 190 C160 160, 160 120, 150 90 Z"
+                    fill="none" stroke="#0F172A" stroke-width="5" />
+              <path class="liquid"
+                    d="M55 140 C60 155, 85 170, 100 175 C115 170, 140 155, 145 140
+                       C145 150, 145 160, 100 180 C55 160, 55 150, 55 140 Z" opacity="0.92"/>
+              <circle class="bubble" cx="95" cy="150" r="6" fill="#ffffff" />
+              <circle class="bubble" cx="115" cy="155" r="5" fill="#ffffff" />
+              <circle class="bubble" cx="105" cy="160" r="4" fill="#ffffff" />
+              <circle class="bubble" cx="90"  cy="165" r="3" fill="#ffffff" />
+              <circle class="bubble" cx="120" cy="162" r="4" fill="#ffffff" />
+            </svg>
+            <div class="caption">Your CHEMPOP lab is baking…</div>
+          </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+    return overlay
+
+# show overlay immediately
+_loading_overlay = show_loading_overlay()
 import streamlit as st
 import pandas as pd
 import numpy as np
